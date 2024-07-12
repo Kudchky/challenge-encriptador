@@ -8,39 +8,35 @@
     <title>Challenge Encriptador</title>
   </head>
   <body>
-    <main class="container">
-      <section class="container__left">
-        <header class="container__header">
-          <div class="container__logo">
+    <main class="app">
+      <section class="app__input-section">
+        <header class="app__header">
+          <nav class="app__logo">
             <img src="assets/logo.png" alt="Logo de Alura" />
-          </div>
+          </nav>
         </header>
-        <input
-          class="container__text"
-          type="text"
-          value="Ingrese el texto aqui"
-        />
-        <div class="container__enlaces">
-          <div class="container__enlaces__texto">
+        <textarea class="app__textarea">Ingrese el texto aqui</textarea>
+        <div class="app__actions">
+          <div class="app__warning">
             <img src="assets/vector.png" alt="Imagen advertencia de texto" />
             <p>Solo letras minúsculas y sin acentos.</p>
           </div>
-          <a class="container__enlaces__link" href="">Encriptar</a>
-          <a class="container__enlaces__link" href="">Desencriptar</a>
+          <button class="app__button" href="">Encriptar</button>
+          <button class="app__button" href="">Desencriptar</button>
         </div>
       </section>
-      <aside class="container__result">
-        <div class="container__result__image">
+      <aside class="app__output">
+        <div class="app__output-image">
           <img src="assets/muneco.png" alt="Imagen de hombre con lupa" />
         </div>
-        <h2 class="container__result__titulo">Ningun mensaje fue encontrado</h2>
-        <p class="container__result__text">
+        <h2 class="app__output-title">Ningun mensaje fue encontrado</h2>
+        <p class="app__output-text">
           Ingresa el texto que desees encriptar o desencriptar
         </p>
         <a class="container__enlaces__link" href=""></a>
       </aside>
     </main>
-    <footer>
+    <footer class="app__footer">
       <p>Paul Castillo</p>
     </footer>
   </body>
