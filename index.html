@@ -9,21 +9,28 @@
   </head>
   <body>
     <main class="container">
-      <section class="container__right">
+      <section class="container__left">
         <header class="container__header">
           <div class="container__logo">
             <img src="assets/logo.png" alt="Logo de Alura" />
           </div>
         </header>
-        <input class="container__text" type="text" value="Ingrese el texto aqui" />
-        <div class="container__right-bottom">
-          <p>Solo letras minúsculas y sin acentos.</p>
-          <a href="">Encriptar</a>
-          <a href="">Desencriptar</a>
+        <input
+          class="container__text"
+          type="text"
+          value="Ingrese el texto aqui"
+        />
+        <div class="container__enlaces">
+          <div class="container__enlaces__texto">
+            <img src="assets/vector.png" alt="Imagen advertencia de texto" />
+            <p>Solo letras minúsculas y sin acentos.</p>
+          </div>
+          <a class="container__enlaces__link" href="">Encriptar</a>
+          <a class="container__enlaces__link" href="">Desencriptar</a>
         </div>
       </section>
-      <aside>
-        <div></div>
+      <aside class="container__right">
+        <div class="container__result"></div>
         <a href=""></a>
       </aside>
     </main>
