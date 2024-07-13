@@ -45,4 +45,5 @@ body {
   color: var(--dark-blue-300);
   font-family: var(--fuente-Inter);
   font-size: 32px;
+  border: none;
 }
