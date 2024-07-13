@@ -1,1 +1,29 @@
-.container
+:root {
+  --light-blue-300: #e9ecf8;
+  --dark-blue-300: #0a3871;
+  --white: #ffffff;
+  --gray: #d8dfe8;
+  --gray-500: #343a40;
+  --gray-400: #495057;
+}
+
+body {
+  background-color: var(--light-blue-300);
+
+}
+.app {
+  display: flex;
+  margin: 2% 2%;
+  height: 90vh;
+  border: 1px solid red;
+}
+
+.app__input-section {
+  width: 70%;
+  border: 1px solid orange;
+}
+
+.app__output {
+  width: 30%;
+  border: 1px solid green;
+}
