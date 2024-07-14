@@ -25,11 +25,15 @@ body {
   width: 80%;
 }
 
+.app__input {
+  height: 90%;
+}
+
 .app__output {
   width: 20%;
   border-radius: 32px;
   background-color: var(--white);
-  box-shadow: 10px 10px 5px grey;
+  box-shadow: 15px 15px 10px var(--gray);
 }
 
 .app__output-star {
