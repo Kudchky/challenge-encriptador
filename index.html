@@ -9,11 +9,11 @@
   </head>
   <body>
     <main class="app">
+      <header class="app__header">
+        <img class="app__logo" src="assets/logo.png" alt="Logo de Alura" />
+      </header>
       <section class="app__input-section">
         <div class="app__input">
-          <header class="app__header">
-            <img class="app__logo" src="assets/logo.png" alt="Logo de Alura" />
-          </header>
           <textarea class="app__textarea">Ingrese el texto aqui</textarea>
           <div class="app__warning">
             <img src="assets/vector.png" alt="Imagen advertencia de texto" />
@@ -21,8 +21,8 @@
           </div>
         </div>
         <div class="app__actions">
-          <button class="app__button">Encriptar</button>
-          <button class="app__button">Desencriptar</button>
+          <button class="app__button-encriptar">Encriptar</button>
+          <button class="app__button-desencriptar">Desencriptar</button>
         </div>
       </section>
       <aside class="app__output">
@@ -35,7 +35,7 @@
             Ingresa el texto que desees encriptar o desencriptar
           </p>
         </div>
-        <button class="app__button">Copiar</button>
+        <button class="app__button-copiar">Copiar</button>
       </aside>
     </main>
     <footer class="app__footer">
