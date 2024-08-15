@@ -1,2 +1,0 @@
-# challenge-encriptador
-Challenge Encriptador
