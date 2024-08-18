@@ -4,7 +4,7 @@
     --light-blue-300: #e9ecf8;
     --gray-400: #495057;
     --white: #ffffff;
-    --red: #EC0303;
+    --red: #ec0303;
 }
 
 /*Globals Styles*/
@@ -134,7 +134,7 @@ h3 {
     color: var(--gray-400);
     text-align: left;
     margin-bottom: 4rem;
-   /*  overflow: auto;
+    /*  overflow: auto;
     white-space: normal; */
     word-wrap: break-word;
 }
@@ -169,6 +169,16 @@ h3 {
     .main__button {
         flex-direction: row;
     }
+
+
+/*     .button:nth-child(1),
+    .button:nth-child(2) {
+        flex: 3;
+    }
+
+    .button:nth-child(3) {
+        flex: 1;
+    } */
 }
 
 @media (max-width: 1024px) {
@@ -207,8 +217,4 @@ h3 {
     .main__form textarea {
         height: 58rem;
     }
-
-
-
-
 }
