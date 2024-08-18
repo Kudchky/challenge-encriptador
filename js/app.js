@@ -1,3 +1,5 @@
+let inputText = document.getElementById("textArea");
+
 const vowels = {
     a: "ai",
     e: "enter",
@@ -5,8 +7,6 @@ const vowels = {
     o: "ober",
     u: "ufat",
 };
-
-console.log(Object.entries(vowels))
 
 const encrypt = (text) => {
     let newText = "";
@@ -21,8 +21,6 @@ const encrypt = (text) => {
     return newText;
 };
 
-console.log(encrypt("gato gato"));
-
 const decrypt = (text) => {
     let newText = "";
     for (let i = 0; i < text.length; i++) {
@@ -32,7 +30,12 @@ const decrypt = (text) => {
                 vowels[letter] === text.substring(i, i + vowels[letter].length)
             ) {
                 newText += letter;
-                text = text.slice(0, i) + letter + text.slice(i + vowels[letter].length);
+                text =
+                    text.slice(0, i) +
+                    letter +
+                    text.slice(i + vowels[letter].length);
+            } else {
+                newText += letter;
             }
         } else {
             newText += letter;
@@ -41,4 +44,41 @@ const decrypt = (text) => {
     return newText;
 };
 
-console.log(decrypt("fenterlimescimesdaidenters poberr enternfrenterntair enterstenter dentersaifimesober y haibenterrlober cobernclufatimesdober cobern enterximestober!"));
+const startEncrypting = () => {
+    let resultEncrypt = encrypt(inputText.value);
+
+    document.getElementById(
+        "result"
+    ).innerHTML = `<p class="text-result">${resultEncrypt}</p>
+                   <button class="button button__decrypt">Copy</button>`;
+
+    inputText.value = "";
+};
+
+const startDecrypting = () => {
+    let resultDecrypt = decrypt(inputText.value);
+
+    document.getElementById(
+        "result"
+    ).innerHTML = `<p class="text-result">${resultDecrypt}</p>
+                   <button class="button button__decrypt">Copy</button>`;
+
+    inputText.value = "";
+};
+
+const validateTextArea = () => {
+    const indication = document.getElementById("indication");
+
+    const regex = /^[a-z\s]*$/;
+
+    if (!regex.test(inputText.value)) {
+        indication.innerHTML = `<img src="../assets/warning.png"/>
+                                <p style="opacity: 0.7; color: var(--red)">Only lowercase letters and no accents</p>`;
+        setTimeout(() => {
+            inputText.value = inputText.value.replace(/[^a-z\s]/g, "");
+        }, 300);
+    } else {
+        indication.innerHTML = `<img src="./assets/exclamation.png" style="opacity: 0"/>
+                                <p>Only lowercase letters and no accents</p>`;
+    }
+};
